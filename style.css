@@ -1,0 +1,21 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.jumbotron {
+    background-image: url(./img/tech-key.jpg);
+    background-position-x: center;
+}
+
+.container h1 {
+    color: azure;
+}
+
+#jumbotron p {
+    color: azure;
+}
+
+.col h1,
+p {
+    color: black;
+}
