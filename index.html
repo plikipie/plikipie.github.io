@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" id="home">
 
 <head>
     <!-- Required meta tags -->
@@ -26,15 +26,15 @@
     <!-- NAVBAR -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#jumbotron"><img src="./img/hp.PNG" class="rounded-circle" width="50px" alt="logo"></a>
+            <a class="navbar-brand page-scroll" href="#home"><img src="./img/hp.PNG" class="rounded-circle" width="50px" alt="logo"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml-auto">
-                    <a class="nav-item nav-link active" href="#jumbotron">Home<span class="sr-only"></span></a>
-                    <a class="nav-item nav-link" href="#about">About Me</a>
-                    <a class="nav-item nav-link" href="#contact">Contact</a>
+                    <a class="nav-item nav-link active page-scroll" href="#home">Home<span class="sr-only"></span></a>
+                    <a class="nav-item nav-link page-scroll" href="#about">About Me</a>
+                    <a class="nav-item nav-link page-scroll" href="#contact">Contact</a>
                 </div>
             </div>
         </div>
@@ -43,14 +43,14 @@
     <!-- JUMBOTRON -->
     <div class="jumbotron jumbotron-fluid bg-light" id="jumbotron">
         <div class="container text-center mt-10">
-            <img src="./img/hmwn.jpg" alt="Responsive image" width="200px" height="auto" class="img-fluid rounded-circle img-thumbnail">
-            <h1 id="judul">Hermawan Prastiyanto</h1>
+            <img src="./img/hmwn.jpg" alt="Responsive image" height="auto" class="img-fluid rounded-circle img-thumbnail">
+            <h1 class="display-4" id="judul">Hermawan Prastiyanto</h1>
             <p class="lead" id="judul">Junior Web Developer</p>
         </div>
     </div>
     <!-- END JUMBOTRON -->
     <!-- ABOUT -->
-    <section id="about" class="about">
+    <section id="about">
         <div class="container">
             <div class="row">
                 <div class="col text-center">
@@ -74,6 +74,7 @@
                         <br>
                         <h3 class="lead text-center"><span class="bg-primary text-light font-weight-bold font-italic">Bahasa/Teknologi</span> saya saat ini <span class="bg-primary text-light font-weight-bold font-italic">adalah</span> :</h3>
                         <p class="text-primary font-weight-bold text-center">HTML5 - CSS3 - JAVASCRIPT - PHP - MYSQL - REACTJS - NODEJS </p>
+
                 </div>
             </div>
     </section>
@@ -81,7 +82,7 @@
     <!-- PORTOFOLIO -->
     <br>
     <br>
-    <section id="portfolio" class="portfolio pb-4 bg-light">
+    <section id="portfolio" class="pb-4 bg-light">
         <div class="container">
             <div class="row mb-4 pt-4">
                 <div class="col text-center">
@@ -126,7 +127,7 @@
     </section>
     <!-- END PORTFOLIO -->
     <!-- CONTACT -->
-    <section id="contact" class="contact pb-4">
+    <section id="contact" class="pb-4">
         <div class="container">
             <div class="row pt-4 mb-4">
                 <div class="col-md">
@@ -202,6 +203,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html

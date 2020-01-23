@@ -18,10 +18,40 @@ body {
 }
 
 
+/* Jumbotron */
+
+.jumbotron {
+    background-size: cover;
+    height: 540px;
+}
+
+.jumbotron .img-fluid {
+    width: 175px;
+}
+
+section {
+    min-height: 420px;
+}
+
+.jumbotron h1 {
+    color: black;
+    font-size: 31px;
+}
+
+.jumbotron p {
+    color: black;
+    font-size: 15px;
+}
+
+.col h1,
+p {
+    color: black;
+}
+
+
 /* DEKSTOP VERSION */
 
 @media (min-width: 991.98px) {
-    .navbar-brand .navbar-link {}
     .nav-link {
         text-transform: uppercase;
         margin-right: 30px;
@@ -35,31 +65,18 @@ body {
         padding-bottom: 5px;
         margin-bottom: -8px;
     }
-    .jumbotron {}
-}
-
-
-/* Jumbotron */
-
-.jumbotron {
-    background-image: url();
-    background-size: cover;
-    height: 640px;
-}
-
-section {
-    min-height: 420px;
-}
-
-.container h1 {
-    color: black;
-}
-
-#jumbotron p {
-    color: black;
-}
-
-.col h1,
-p {
-    color: black;
+    .jumbotron {
+        background-size: cover;
+        height: 640;
+    }
+    .jumbotron h1 {
+        font-size: 62px;
+    }
+    .jumbotron .img-fluid {
+        width: 200px;
+    }
+    .jumbotron p {
+        color: black;
+        font-size: 30px;
+    }
 }
