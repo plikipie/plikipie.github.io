@@ -9,40 +9,47 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- My CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- My Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC|Viga&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+
+
 
     <title>Hermawan Prastiyanto</title>
 </head>
 
 <body class="mt-5">
+    <!-- NAVBAR -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#jumbotron">Hermawan Prastiyanto</a>
+            <a class="navbar-brand" href="#jumbotron"><img src="./img/hp.PNG" class="rounded-circle" width="50px" alt="logo"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="#jumbotron">Home<span class="sr-only">(current)</span></a>
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-item nav-link active" href="#jumbotron">Home<span class="sr-only"></span></a>
                     <a class="nav-item nav-link" href="#about">About Me</a>
                     <a class="nav-item nav-link" href="#contact">Contact</a>
                 </div>
             </div>
         </div>
     </nav>
-
-    <div class="jumbotron jumbotron-fluid mb-8" id="jumbotron">
-        <div class="container text-center pt-8">
-            <img src="./img/hmwn.jpg" alt="Responsive image" width="25%" height="auto" class="img-fluid rounded-circle img-thumbnail">
-            <h1 class="display-4" id="judul">Hermawan Prastiyanto</h1>
+    <!-- END NAVBAR -->
+    <!-- JUMBOTRON -->
+    <div class="jumbotron jumbotron-fluid bg-light" id="jumbotron">
+        <div class="container text-center mt-10">
+            <img src="./img/hmwn.jpg" alt="Responsive image" width="200px" height="auto" class="img-fluid rounded-circle img-thumbnail">
+            <h1 id="judul">Hermawan Prastiyanto</h1>
             <p class="lead" id="judul">Junior Web Developer</p>
         </div>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
+    <!-- END JUMBOTRON -->
+    <!-- ABOUT -->
     <section id="about" class="about">
         <div class="container">
             <div class="row">
@@ -61,17 +68,20 @@
                             saya juga belajar melalui online seperti <a class="font-weight-bold font-italic" href="https://www.dicoding.com/academies/123/discussions">Web Fundamental Dicoding</a>,
                             <a class="font-weight-bold font-italic" href="https://www.w3schools.com/js/">W3Shool Javascript</a>, <a class="font-weight-bold font-italic" href="https://www.freecodecamp.org/learn/"> FreeCodeCamp</a> dan juga melihat tutorial
                             di youtube tentang Javascript.</p>
-                        <p class="lead text-center"> Saya selalu memotivasi diri saya untuk <span class="text-white bg-primary font-italic font-weight-bold">belajar</span> dan <span class="text-white bg-primary font-italic font-weight-bold">praktek</span> membuat aplikasi-aplikasi
-                            sederhana, karena saya tahu cara belajar <span class="font-weight-bold font-italic">programming</span> adalah <span class="font-weight-bold">praktek</span>.Saya juga mengerjakan proyek pribadi dengan pengetahuan yang saya kumpulkan
+                        <p class="lead text-center"> Saya selalu memotivasi diri saya untuk <span class="text-white bg-primary font-italic font-weight-bold">belajar</span> dan <span class="text-white bg-primary font-italic font-weight-bold">praktek</span>, membuat aplikasi sederhana
+                            misalnya,karena saya tahu cara belajar <span class="font-weight-bold font-italic">programming</span> adalah <span class="font-weight-bold">praktek</span>.Saya juga mengerjakan proyek pribadi dengan pengetahuan yang saya kumpulkan
                             dari kursus, Anda dapat memeriksanya di <a class="font-weight-bold font-italic" href="#portfolio">Portfolio</a> saya.</p>
                         <br>
                         <h3 class="lead text-center"><span class="bg-primary text-light font-weight-bold font-italic">Bahasa/Teknologi</span> saya saat ini <span class="bg-primary text-light font-weight-bold font-italic">adalah</span> :</h3>
+                        <p class="text-primary font-weight-bold text-center">HTML5 - CSS3 - JAVASCRIPT - PHP - MYSQL - REACTJS - NODEJS </p>
                 </div>
             </div>
     </section>
+    <!-- END ABOUT -->
+    <!-- PORTOFOLIO -->
     <br>
     <br>
-    <section id="portfolio" class="portfolio bg-light pb-4">
+    <section id="portfolio" class="portfolio pb-4 bg-light">
         <div class="container">
             <div class="row mb-4 pt-4">
                 <div class="col text-center">
@@ -83,30 +93,30 @@
             <div class="row">
                 <div class="col-md">
                     <div class="card">
-                        <img class="card-img-top" src="./img/poto1.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="./img/register.PNG" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">Aplikasi Gudang dengan Berbasis Web</h5>
-                            <p class="card-text">Saya membuat projek ini untuk melengkapi tugas laporan dari Kerja Praktek saya, disini user dapat mendaftar sebagai user, lalu dapat menambahkan data barang masuk, saya membuat dengan menggunakan PHP Native. </p>
+                            <p class="card-text">Saya membuat projek ini untuk melengkapi tugas laporan dari Kerja Praktek saya di BSSN (Badan Siber Sandi Negara), aplikasi ini digunakan untuk menginput barang masuk, maupun barang keluar. User juga dapat register maupun login</p>
+                            <a href="https://github.com/plikipie/Membuat-APK-Monitoring-Gudang-CRUD" class="btn btn-primary">Detail</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="card">
+                        <img class="card-img-top" src="./img/coming-soon-4.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Cooming Soon!</h5>
+                            <p class="card-text">Seiring berkembangnya teknologi, saya sedang memperbaiki skill saya.</p>
                             <a href="#" class="btn btn-primary">Detail</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md">
                     <div class="card">
-                        <img class="card-img-top" src="./img/poto1.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="./img/coming-soon-4.png" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">Aplikasi Gudang dengan Berbasis Web</h5>
-                            <p class="card-text">Saya membuat projek ini untuk melengkapi tugas laporan dari Kerja Praktek saya, disini user dapat mendaftar sebagai user, lalu dapat menambahkan data barang masuk, saya membuat dengan menggunakan PHP Native.</p>
-                            <a href="#" class="btn btn-primary">Detail</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md">
-                    <div class="card">
-                        <img class="card-img-top" src="./img/poto1.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Aplikasi Gudang dengan Berbasis Web</h5>
-                            <p class="card-text">Saya membuat projek ini untuk melengkapi tugas laporan dari Kerja Praktek saya, disini user dapat mendaftar sebagai user, lalu dapat menambahkan data barang masuk, saya membuat dengan menggunakan PHP Native. </p>
+                            <h5 class="card-title">Coming Soon!</h5>
+                            <p class="card-text">Seiring berkembangnya teknologi, saya sedang memperbaiki skill saya.</p>
                             <a href="#" class="btn btn-primary">Detail</a>
                         </div>
                     </div>
@@ -114,7 +124,8 @@
             </div>
         </div>
     </section>
-
+    <!-- END PORTFOLIO -->
+    <!-- CONTACT -->
     <section id="contact" class="contact pb-4">
         <div class="container">
             <div class="row pt-4 mb-4">
@@ -140,7 +151,7 @@
                         <li class="list-group-item">plikipie@gmail.com</li>
                     </ul>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 pt-4">
                     <form>
                         <div class="form-group text-left">
                             <label for="nama">Name</label>
@@ -160,39 +171,30 @@
             </div>
         </div>
     </section>
-
+    <!-- END CONTACT -->
+    <!-- FOOTER -->
     <footer class="bg-dark text-white">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col pt-4 text-center ">
                     <div>
-                        <a href="http://instagram.com/plikipie"><img src="./img/ig.png" width="30" height="30" alt="Instagram"></a>
-                        <a href="http://facebook.com/username"><img src="./img/fb.png" width="30" height="30" alt="Facebook"></a>
-                        <a href="http://github.com/plikipie"><img src="./img/git.png" width="30" height="30" alt="Github"></a>
-                        <a href="http://twitter.com/plikipie"><img src="./img/twt.png" width="30" height="30" alt="twitter"></a>
+                        <a href="http://instagram.com/plikipie">
+                            <img src="./img/ig.png" width="30" height="30" alt="Instagram"></a>
+                        <a href="http://facebook.com/kiiplie">
+                            <img src="./img/fb.png" width="30" height="30" alt="Facebook"></a>
+                        <a href="http://github.com/plikipie">
+                            <img src="./img/git.png" width="30" height="30" alt="Github"></a>
+                        <a href="http://twitter.com/plikipie">
+                            <img src="./img/twt.png" width="30" height="30" alt="twitter"></a>
                         <br>
                         <br>
-                        <p class="text-light">Copyright 2020, Hermawan Prastiyanto</p>
+                        <p class="text-light">Copyright 2020 © Hermawan Prastiyanto</p>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <!-- END FOOTER -->
 
 
     <!-- Optional JavaScript -->

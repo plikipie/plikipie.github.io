@@ -2,9 +2,49 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+
+/* Navbar */
+
+.navbar-brand {
+    font-family: 'Bowlby One SC';
+    font-size: 32px;
+}
+
+
+/* Utilities */
+
+.bg-dark {
+    opacity: 0.9;
+}
+
+
+/* DEKSTOP VERSION */
+
+@media (min-width: 991.98px) {
+    .navbar-brand .navbar-link {}
+    .nav-link {
+        text-transform: uppercase;
+        margin-right: 30px;
+    }
+    .nav-link:hover::after {
+        content: '';
+        display: block;
+        border-bottom: 3px solid #0b63dc;
+        width: 50%;
+        margin: auto;
+        padding-bottom: 5px;
+        margin-bottom: -8px;
+    }
+    .jumbotron {}
+}
+
+
+/* Jumbotron */
+
 .jumbotron {
-    background-image: white;
-    background-position-x: center;
+    background-image: url();
+    background-size: cover;
+    height: 640px;
 }
 
 section {
