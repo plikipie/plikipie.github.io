@@ -25,6 +25,10 @@ body {
     height: 540px;
 }
 
+.jumbotron .container {
+    padding-top: 50px;
+}
+
 .jumbotron .img-fluid {
     width: 175px;
 }
@@ -68,6 +72,9 @@ p {
     .jumbotron {
         background-size: cover;
         height: 640;
+    }
+    .jumbotron .container {
+        padding-top: 30px;
     }
     .jumbotron h1 {
         font-size: 62px;
