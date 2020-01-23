@@ -3,16 +3,20 @@ body {
 }
 
 .jumbotron {
-    background-image: url(./img/tech-key.jpg);
+    background-image: white;
     background-position-x: center;
 }
 
+section {
+    min-height: 420px;
+}
+
 .container h1 {
-    color: azure;
+    color: black;
 }
 
 #jumbotron p {
-    color: azure;
+    color: black;
 }
 
 .col h1,
