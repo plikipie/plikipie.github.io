@@ -1,5 +1,8 @@
 body {
     font-family: 'Poppins', sans-serif;
+    background-image: url(./img/Desain\ tanpa\ judul\ \(2\).png);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 
@@ -23,6 +26,7 @@ body {
 .jumbotron {
     background-size: cover;
     height: 540px;
+    background: rgb(252, 252, 252, 0.0);
 }
 
 .jumbotron .container {
