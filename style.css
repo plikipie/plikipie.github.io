@@ -17,6 +17,11 @@ body {
 
 /* Utilities */
 
+.button {
+    text-transform: uppercase;
+    border-radius: 40px;
+}
+
 .bg-dark {
     opacity: 0.9;
 }
@@ -97,5 +102,8 @@ p {
     .jumbotron p {
         color: black;
         font-size: 30px;
+    }
+    section {
+        min-height: 420px;
     }
 }
