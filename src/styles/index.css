@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing:border-box; font-family: 'Plus Jakarta Sans', sans-serif !important; }
+html, body { margin: 0; padding: 0; background-color: var(--bg-color, #000); }
+body { transition: background .4s ease; overflow-x: hidden; }
+@media (pointer: fine) {
+  body, a, button { cursor: none !important; }
+}
+::-webkit-scrollbar { width:5px; } 
+::-webkit-scrollbar-track { background:var(--bg-color); } 
+::-webkit-scrollbar-thumb { background:var(--border-color); border-radius:3px; }
+input, textarea { color:var(--text-color) !important; }
+input:focus, textarea:focus { outline:none; border-color:rgba(99,102,241,.5)!important; }
+
+.desk-nav { display:flex; }
+.ham-btn  { display:none; }
+
+.link-line { position:relative; text-decoration:none; }
+.link-line::after { content:''; position:absolute; bottom:-2px; left:0; right:0; height:1px; background:var(--accent-color); transform:scaleX(0); transition:transform .2s ease; transform-origin:left; }
+.link-line:hover::after { transform:scaleX(1); }
+
+.card-hover { transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s ease,border-color .3s ease !important; }
+.card-hover:hover { transform:translateY(-6px) !important; box-shadow:var(--shadow-card) !important; }
+
+@keyframes fadeIn     { from{opacity:0} to{opacity:1} }
+@keyframes slideRight { from{opacity:0;transform:translateX(-20px)} to{opacity:1;transform:translateX(0)} }
+@keyframes navIn      { from{opacity:0;transform:translateY(-16px)} to{opacity:1;transform:translateY(0)} }
+
+.sr-show {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Ornaments */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  animation: float 25s infinite ease-in-out alternate;
+  will-change: transform;
+}
+
+.orb-1 { width: 55vw; height: 55vw; max-width: 600px; max-height: 600px; top: -10%; left: -10%; animation-duration: 28s; }
+.orb-2 { width: 45vw; height: 45vw; max-width: 500px; max-height: 500px; bottom: -20%; right: -10%; animation-duration: 34s; animation-direction: alternate-reverse; }
+.orb-3 { width: 40vw; height: 40vw; max-width: 400px; max-height: 400px; top: 40%; left: 30%; animation-duration: 40s; }
+
+@keyframes float {
+  0% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(8vw, -6vw) scale(1.05); }
+  66% { transform: translate(-6vw, 8vw) scale(0.95); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+@media(max-width:680px){
+  .desk-nav{display:none!important;}
+  .ham-btn{display:flex!important;}
+  .feat-grid{grid-template-columns:1fr!important;}
+}
