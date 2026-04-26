@@ -17,7 +17,7 @@ function AppShell() {
   const location = useLocation();
   const path = location.pathname;
   const { t } = useTheme();
-  
+
   return (
     <div style={{ background: t.bg, minHeight: "100vh", color: t.text, transition: "background .4s ease, color .4s ease", position: "relative" }}>
       <CustomCursor />
