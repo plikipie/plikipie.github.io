@@ -9,7 +9,7 @@ import { Btn } from "../components/ui/Elements";
 export default function ProjectDetail() {
   const navigate = useNavigate();
   const { id } = useParams();
-  const { t } = useTheme();
+  const { dark, t } = useTheme();
   const ref = useScrollReveal();
   const project = PROJECTS.find(p => p.id === id);
   const [ctaHov, setCtaHov] = useState(false);
@@ -23,7 +23,7 @@ export default function ProjectDetail() {
   return (
     <PageWrapper>
       <div ref={ref}>
-        <div style={{ background:project.bg, padding:"8rem 1.5rem 5rem", borderBottom:`1px solid ${t.borderMid}` }}>
+        <div style={{ background:dark?project.bg:"linear-gradient(135deg,#0a0a09,#3a3832)", padding:"8rem 1.5rem 5rem", borderBottom:`1px solid ${t.borderMid}` }}>
           <div style={{ maxWidth:1080, margin:"0 auto" }}>
             <button data-sr onClick={()=>navigate("/projects")} style={{ background:"none", border:"none", color:"rgba(255,255,255,.4)", fontFamily:"monospace", fontSize:".75rem", cursor:"pointer", marginBottom:"2rem", letterSpacing:".04em", padding:0, transition:"color .2s", ...srStyle(0) }} onMouseEnter={e=>e.currentTarget.style.color="#fff"} onMouseLeave={e=>e.currentTarget.style.color="rgba(255,255,255,.4)"}>← Back to Profile</button>
             <div data-sr style={{ display:"flex", gap:".5rem", marginBottom:"1.2rem", flexWrap:"wrap", ...srStyle(80) }}>{project.stack.map(tk=><span key={tk} style={{ background:"rgba(255,255,255,.1)", color:"rgba(255,255,255,.6)", fontFamily:"monospace", fontSize:".66rem", padding:".18rem .55rem", borderRadius:4, border:"1px solid rgba(255,255,255,.15)", letterSpacing:".04em" }}>{tk}</span>)}</div>
@@ -44,7 +44,7 @@ export default function ProjectDetail() {
           </div>
           <div style={{ display:"grid", gap:"2.5rem" }}>
             {project.sections.map((s,i)=>(
-              <div key={i} data-sr style={{ paddingLeft:"1.4rem", borderLeft:`2px solid ${project.color}30`, ...srStyle(i*100) }}>
+              <div key={i} data-sr style={{ paddingLeft:"1.4rem", borderLeft:`2px solid ${dark?project.color+"30":t.borderHi}`, ...srStyle(i*100) }}>
                 <h3 style={{ color:t.text, fontWeight:800, fontSize:".92rem", marginBottom:".5rem" }}>{s.title}</h3>
                 <p style={{ color:t.textMuted, lineHeight:1.85, fontSize:".86rem" }}>{s.body}</p>
               </div>
@@ -60,7 +60,7 @@ export default function ProjectDetail() {
           <h2 style={{ fontSize:"clamp(1.6rem,3vw,2.4rem)", fontWeight:900, letterSpacing:"-.04em", color:t.text, marginBottom:".75rem" }}>Interested in working with me?</h2>
           <p style={{ color:t.textMuted, fontFamily:"monospace", fontSize:".88rem", marginBottom:"2rem" }}>Let's build something great together.</p>
           <button onClick={()=>navigate("/contact")} onMouseEnter={()=>setCtaHov(true)} onMouseLeave={()=>setCtaHov(false)}
-            style={{ background:ctaHov?t.accentHov:t.accent, color:"#fff", padding:".75rem 2rem", borderRadius:10, fontFamily:"monospace", fontWeight:800, fontSize:".82rem", letterSpacing:".08em", border:"none", cursor:"pointer", transition:"all .2s", transform:ctaHov?"translateY(-2px)":"none", boxShadow:ctaHov?"0 10px 28px rgba(99,102,241,.3)":"none" }}>
+            style={{ background:ctaHov?t.accentHov:t.accent, color:"#0a0a09", padding:".75rem 2rem", borderRadius:4, fontFamily:"monospace", fontWeight:800, fontSize:".82rem", letterSpacing:".08em", border:"none", cursor:"pointer", transition:"all .2s", transform:ctaHov?"translateY(-2px)":"none", boxShadow:ctaHov?`0 10px 28px ${t.borderHi}`:"none" }}>
             EMAIL ME →
           </button>
         </div>

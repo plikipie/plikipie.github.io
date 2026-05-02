@@ -93,10 +93,11 @@ export function AnimatedName({ t }: { t: ThemeTokens }) {
     
   return (
     <h1 
+      className="animated-name"
       ref={containerRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      style={{ fontSize:"clamp(2.8rem,9vw,6.2rem)", fontWeight:900, lineHeight:.98, letterSpacing:"-.05em", marginBottom:"1.5rem", perspective:800, cursor:"crosshair", position:"relative", zIndex:20 }}
+      style={{ fontWeight:900, lineHeight:.98, letterSpacing:"0", marginBottom:"1.5rem", perspective:800, cursor:"crosshair", position:"relative", zIndex:20 }}
     >
       <div style={{ overflow: interactive ? "visible" : "hidden", paddingBottom:".1em" }}>
         {renderWord(first,  500, t.text, 0)}

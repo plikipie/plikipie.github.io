@@ -24,11 +24,11 @@ export default function PostDetail() {
       <div ref={ref} style={{ maxWidth:680, margin:"0 auto", padding:"7rem 1.5rem 5rem" }}>
         <button data-sr onClick={()=>navigate("/blogs")} style={{ background:"none", border:"none", color:t.textFaint, fontFamily:"monospace", fontSize:".75rem", cursor:"pointer", marginBottom:"2.5rem", letterSpacing:".04em", padding:0, transition:"color .2s", ...srStyle(0) }} onMouseEnter={e=>e.currentTarget.style.color=t.text} onMouseLeave={e=>e.currentTarget.style.color=t.textFaint}>← Back to Blogs</button>
         <div data-sr style={{ display:"flex", alignItems:"center", gap:".7rem", marginBottom:"1.2rem", ...srStyle(80) }}>
-          <span style={{ background:"rgba(99,102,241,.1)", color:t.accentText, fontFamily:"monospace", fontSize:".65rem", padding:".2rem .6rem", borderRadius:4, letterSpacing:".06em" }}>{post.tag}</span>
+          <span style={{ background:t.bgMuted, color:t.accentText, fontFamily:"monospace", fontSize:".65rem", padding:".2rem .6rem", borderRadius:3, letterSpacing:".06em", border:`1px solid ${t.border}` }}>{post.tag}</span>
           <span style={{ fontFamily:"monospace", color:t.textFaint, fontSize:".7rem" }}>{post.date} · {post.readTime}</span>
         </div>
         <h1 data-sr style={{ fontSize:"clamp(1.8rem,4vw,2.6rem)", fontWeight:900, letterSpacing:"-.04em", color:t.text, lineHeight:1.15, marginBottom:"2rem", ...srStyle(160) }}>{post.title}</h1>
-        <p data-sr style={{ color:t.textMuted, fontSize:"1rem", lineHeight:1.8, marginBottom:"2.5rem", borderLeft:`2px solid rgba(99,102,241,.4)`, paddingLeft:"1.2rem", fontStyle:"italic", ...srStyle(240) }}>{post.desc}</p>
+        <p data-sr style={{ color:t.textMuted, fontSize:"1rem", lineHeight:1.8, marginBottom:"2.5rem", borderLeft:`2px solid ${t.borderHi}`, paddingLeft:"1.2rem", fontStyle:"italic", ...srStyle(240) }}>{post.desc}</p>
         
         <div style={{ display:"grid", gap:"2rem" }}>
           {post.content.map((s,i) => (

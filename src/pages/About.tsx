@@ -6,10 +6,11 @@ import { PageWrapper } from "../components/PageWrapper";
 
 const SkillItem = ({ s, t }: any) => {
   const [h,setH] = useState(false);
+  const { dark } = useTheme();
   return (
     <div onMouseEnter={()=>setH(true)} onMouseLeave={()=>setH(false)}
       style={{ padding:"1.2rem", background:h?t.bgHover:t.bgCard, transition:"background .18s", cursor:"default" }}>
-      <div style={{ width:30, height:30, borderRadius:7, background:s.color+"14", border:`1px solid ${s.color}22`, display:"flex", alignItems:"center", justifyContent:"center", marginBottom:".7rem", color: s.color }} dangerouslySetInnerHTML={{ __html: s.svg }} />
+      <div style={{ width:30, height:30, borderRadius:7, background:dark?s.color+"14":"rgba(10,10,9,.055)", border:`1px solid ${dark?s.color+"22":t.border}`, display:"flex", alignItems:"center", justifyContent:"center", marginBottom:".7rem", color: dark?s.color:t.text, filter:dark?"none":"grayscale(1)" }} dangerouslySetInnerHTML={{ __html: s.svg }} />
       <div style={{ color:t.text, fontWeight:700, fontSize:".84rem", marginBottom:".15rem" }}>{s.name}</div>
       <div style={{ color:t.textFaint, fontFamily:"monospace", fontSize:".68rem" }}>{s.sub}</div>
     </div>

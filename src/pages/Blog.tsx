@@ -12,7 +12,7 @@ const PostItem = ({ p, i, t, navigate }: any) => {
       style={{ display:"grid", gridTemplateColumns:"1fr auto", alignItems:"center", gap:"1.5rem", padding:"1.6rem 1.8rem", background:h?t.bgHover:t.bgCard, border:"none", cursor:"pointer", textAlign:"left", borderBottom:i<POSTS.length-1?`1px solid ${t.border}`:"none", transition:"background .18s" }}>
       <div>
         <div style={{ display:"flex", alignItems:"center", gap:".7rem", marginBottom:".5rem" }}>
-          <span style={{ background:`rgba(99,102,241,.1)`, color:t.accentText, fontFamily:"monospace", fontSize:".62rem", padding:".18rem .55rem", borderRadius:4, letterSpacing:".06em" }}>{p.tag}</span>
+          <span style={{ background:t.bgMuted, color:t.accentText, fontFamily:"monospace", fontSize:".62rem", padding:".18rem .55rem", borderRadius:3, letterSpacing:".06em", border:`1px solid ${t.border}` }}>{p.tag}</span>
           <span style={{ fontFamily:"monospace", color:t.textFaint, fontSize:".68rem" }}>{p.date}</span>
         </div>
         <h2 style={{ color:t.text, fontWeight:800, fontSize:"1rem", letterSpacing:"-.02em", marginBottom:".4rem" }}>{p.title}</h2>
@@ -37,7 +37,7 @@ export default function Blog() {
         <p data-sr style={{ fontFamily:"monospace", color:t.accent, fontSize:".7rem", letterSpacing:".12em", textTransform:"uppercase", marginBottom:".6rem", ...srStyle(0) }}>Writing</p>
         <h1 data-sr style={{ fontSize:"clamp(2rem,5vw,3rem)", fontWeight:900, letterSpacing:"-.04em", color:t.text, marginBottom:".6rem", ...srStyle(80) }}>Blogs</h1>
         <p data-sr style={{ color:t.textMuted, fontFamily:"monospace", fontSize:".84rem", marginBottom:"3.5rem", ...srStyle(160) }}>Thoughts on AI, web development, and building things on the internet.</p>
-        <div data-sr style={{ display:"grid", gap:"1px", background:t.border, border:`1px solid ${t.border}`, borderRadius:14, overflow:"hidden", ...srStyle(240) }}>
+        <div data-sr style={{ display:"grid", gap:"1px", background:t.border, border:`1px solid ${t.border}`, borderRadius:6, overflow:"hidden", ...srStyle(240) }}>
           {POSTS.map((p,i) => <PostItem key={p.id} p={p} i={i} t={t} navigate={navigate} />)}
         </div>
       </div>
