@@ -66,7 +66,7 @@ export function Btn({
     },
     white: {
       background: h ? t.accentHov : t.accent,
-      color: "#0a0a09",
+      color: dark ? "#0a0a09" : "#ffffff",
       transform: h ? "translateY(-2px)" : "none",
     },
   };

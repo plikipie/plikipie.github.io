@@ -1,32 +1,282 @@
-import { Project, Skill, WhyReason, Post } from '../types';
+import { Project, Skill, WhyReason, Post } from "../types";
 
 export const PROJECTS: Project[] = [
-  { id:"umkm-food", title:"UMKM Food Landing Page", tagline:"Local food business, global-quality web presence", short:"A warm, conversion-focused landing page for a local Indonesian food business.", desc:"Designed and built a high-impact landing page for a local food brand. The goal was to feel modern and trustworthy — helping a small business compete with larger chains online.", stack:["HTML","Tailwind CSS","CSS Animations"], year:"2024", role:"UI Designer & Developer", color:"#f97316", bg:"linear-gradient(135deg,#1a0a00,#2d1200)", gradient:"linear-gradient(135deg,#f97316,#ea580c)", icon:"🍜", featured:true, results:["↑ 40% click-through","Mobile-first","Sub-2s load"], sections:[{title:"The Challenge",body:"The client needed a web presence fast — competitors already had polished sites. Budget was tight, timeline was one week."},{title:"Approach",body:"Wireframe focused on hero, menu highlights, and a single strong CTA. Tailwind utility classes for rapid iteration."},{title:"Outcome",body:"Delivered in 4 days. Google Ads campaign saw 40% click-through improvement over their old site."}] },
-  { id:"portfolio-site", title:"Personal Portfolio Website", tagline:"Clean, minimal, built to impress", short:"A performance-focused portfolio with strong UI/UX principles.", desc:"Minimal, typography-driven portfolio site. Emphasis on whitespace, readable hierarchy, and fast performance.", stack:["HTML","Tailwind CSS","JavaScript"], year:"2024", role:"Full Designer & Developer", color:"#6366f1", bg:"linear-gradient(135deg,#0a0014,#150830)", gradient:"linear-gradient(135deg,#6366f1,#8b5cf6)", icon:"🖥️", results:["100 Lighthouse score","Zero JS frameworks","Fully responsive"], sections:[{title:"The Challenge",body:"Create a portfolio that feels professional and modern without relying on heavy frameworks."},{title:"Approach",body:"Framework-free — pure HTML, Tailwind via CDN, and minimal vanilla JS. Readability first."},{title:"Outcome",body:"Perfect Lighthouse score. Loads in under one second, scales from 320px to 4K."}] },
-  { id:"dashboard-ui", title:"Simple Dashboard UI", tagline:"Data at a glance, no bloat", short:"A lightweight admin dashboard with stat cards, tables, and sidebar.", desc:"Clean admin dashboard with stat cards, a collapsible sidebar, and data table. No heavy frameworks — Tailwind and vanilla JS only.", stack:["Tailwind CSS","JavaScript","Chart.js"], year:"2024", role:"Frontend Developer", color:"#10b981", bg:"linear-gradient(135deg,#00120a,#002918)", gradient:"linear-gradient(135deg,#10b981,#059669)", icon:"📊", results:["Vanilla JS only","Responsive sidebar","Interactive charts"], sections:[{title:"The Challenge",body:"Client wanted a dashboard without a React or Vue dependency."},{title:"Approach",body:"Tailwind for layout, Chart.js for visualizations, plain JS for interactivity."},{title:"Outcome",body:"Clean dashboard under 500 lines the team could extend without build tooling."}] },
-  { id:"saas-landing", title:"SaaS Product Landing Page", tagline:"Convert visitors into trial signups", short:"A high-converting landing page for a B2B SaaS productivity tool.", desc:"Full marketing landing page — hero, feature grid, pricing table, testimonials, and sticky CTA bar.", stack:["React","Tailwind CSS","Framer Motion"], year:"2025", role:"Frontend Developer", color:"#3b82f6", bg:"linear-gradient(135deg,#000c1a,#001a3a)", gradient:"linear-gradient(135deg,#3b82f6,#2563eb)", icon:"🚀", results:["↑ 28% trial signups","Animated hero","Pricing table"], sections:[{title:"The Challenge",body:"No marketing site. Needed a page that drove free trial signups from cold traffic."},{title:"Approach",body:"Strong above-the-fold statement, social proof, frictionless CTA. Framer Motion for scroll animations."},{title:"Outcome",body:"28% increase in trial signups in 3 weeks. Bounce rate down 18%."}] },
+  {
+    id: "umkm-food",
+    title: "UMKM Food Landing Page",
+    tagline: "Local food business, global-quality web presence",
+    short:
+      "A warm, conversion-focused landing page for a local Indonesian food business.",
+    desc: "Designed and built a high-impact landing page for a local food brand. The goal was to feel modern and trustworthy — helping a small business compete with larger chains online.",
+    stack: ["HTML", "Tailwind CSS", "CSS Animations"],
+    year: "2024",
+    role: "UI Designer & Developer",
+    color: "#f97316",
+    bg: "linear-gradient(135deg,#1a0a00,#2d1200)",
+    gradient: "linear-gradient(135deg,#f97316,#ea580c)",
+    icon: "🍜",
+    featured: true,
+    results: ["↑ 40% click-through", "Mobile-first", "Sub-2s load"],
+    sections: [
+      {
+        title: "The Challenge",
+        body: "The client needed a web presence fast — competitors already had polished sites. Budget was tight, timeline was one week.",
+      },
+      {
+        title: "Approach",
+        body: "Wireframe focused on hero, menu highlights, and a single strong CTA. Tailwind utility classes for rapid iteration.",
+      },
+      {
+        title: "Outcome",
+        body: "Delivered in 4 days. Google Ads campaign saw 40% click-through improvement over their old site.",
+      },
+    ],
+  },
+  {
+    id: "portfolio-site",
+    title: "Personal Portfolio Website",
+    tagline: "Clean, minimal, built to impress",
+    short: "A performance-focused portfolio with strong UI/UX principles.",
+    desc: "Minimal, typography-driven portfolio site. Emphasis on whitespace, readable hierarchy, and fast performance.",
+    stack: ["HTML", "Tailwind CSS", "JavaScript"],
+    year: "2024",
+    role: "Full Designer & Developer",
+    color: "#6366f1",
+    bg: "linear-gradient(135deg,#0a0014,#150830)",
+    gradient: "linear-gradient(135deg,#6366f1,#8b5cf6)",
+    icon: "🖥️",
+    results: ["100 Lighthouse score", "Zero JS frameworks", "Fully responsive"],
+    sections: [
+      {
+        title: "The Challenge",
+        body: "Create a portfolio that feels professional and modern without relying on heavy frameworks.",
+      },
+      {
+        title: "Approach",
+        body: "Framework-free — pure HTML, Tailwind via CDN, and minimal vanilla JS. Readability first.",
+      },
+      {
+        title: "Outcome",
+        body: "Perfect Lighthouse score. Loads in under one second, scales from 320px to 4K.",
+      },
+    ],
+  },
+  {
+    id: "dashboard-ui",
+    title: "Simple Dashboard UI",
+    tagline: "Data at a glance, no bloat",
+    short:
+      "A lightweight admin dashboard with stat cards, tables, and sidebar.",
+    desc: "Clean admin dashboard with stat cards, a collapsible sidebar, and data table. No heavy frameworks — Tailwind and vanilla JS only.",
+    stack: ["Tailwind CSS", "JavaScript", "Chart.js"],
+    year: "2024",
+    role: "Frontend Developer",
+    color: "#10b981",
+    bg: "linear-gradient(135deg,#00120a,#002918)",
+    gradient: "linear-gradient(135deg,#10b981,#059669)",
+    icon: "📊",
+    results: ["Vanilla JS only", "Responsive sidebar", "Interactive charts"],
+    sections: [
+      {
+        title: "The Challenge",
+        body: "Client wanted a dashboard without a React or Vue dependency.",
+      },
+      {
+        title: "Approach",
+        body: "Tailwind for layout, Chart.js for visualizations, plain JS for interactivity.",
+      },
+      {
+        title: "Outcome",
+        body: "Clean dashboard under 500 lines the team could extend without build tooling.",
+      },
+    ],
+  },
+  {
+    id: "saas-landing",
+    title: "SaaS Product Landing Page",
+    tagline: "Convert visitors into trial signups",
+    short: "A high-converting landing page for a B2B SaaS productivity tool.",
+    desc: "Full marketing landing page — hero, feature grid, pricing table, testimonials, and sticky CTA bar.",
+    stack: ["React", "Tailwind CSS", "Framer Motion"],
+    year: "2025",
+    role: "Frontend Developer",
+    color: "#3b82f6",
+    bg: "linear-gradient(135deg,#000c1a,#001a3a)",
+    gradient: "linear-gradient(135deg,#3b82f6,#2563eb)",
+    icon: "🚀",
+    results: ["↑ 28% trial signups", "Animated hero", "Pricing table"],
+    sections: [
+      {
+        title: "The Challenge",
+        body: "No marketing site. Needed a page that drove free trial signups from cold traffic.",
+      },
+      {
+        title: "Approach",
+        body: "Strong above-the-fold statement, social proof, frictionless CTA. Framer Motion for scroll animations.",
+      },
+      {
+        title: "Outcome",
+        body: "28% increase in trial signups in 3 weeks. Bounce rate down 18%.",
+      },
+    ],
+  },
 ];
 
 export const SKILLS: Skill[] = [
-  {name:"HTML5",sub:"Semantic markup",color:"#e44d26", svg:'<svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718h9.049l.203-2.375H5.666l.722 8.188h7.942l-.248 2.822-2.122.56-2.126-.554-.13-1.488H7.31l.245 3.32 4.417 1.236 4.42-1.238.45-5.068H8.531z"/></svg>'},
-  {name:"CSS3",sub:"Layouts & animation",color:"#1572b6", svg:'<svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.436 4.904-2.888.778-2.887-.78-.17-1.927H6.551l.28 3.93 5.112 1.397 5.105-1.4.743-8.318H18.59z"/></svg>'},
-  {name:"Tailwind CSS",sub:"Utility-first",color:"#38bdf8", svg:'<svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"/></svg>'},
-  {name:"JavaScript",sub:"ES6+ & DOM",color:"#f7df1e", svg:'<svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.81.39.024.75.426.857.771l1.502-.405c-.158-.57-.75-1.275-1.725-1.455-.806-.135-1.677-.075-2.315.36-.613.435-.879 1.095-.89 1.77-.017.96.614 1.575 1.487 1.95.842.345 1.907.57 2.146 1.095.106.315.061.645-.257.855-.306.21-.861.345-1.453.255-.783-.12-1.353-.615-1.597-1.23l-1.583.435c.34 1.08 1.44 1.785 2.656 1.935.882.105 1.839-.015 2.515-.465.75-.525 1.157-1.32 1.082-2.145l-.002-.001zm-7.618-.465c.01-.84-.253-1.62-.871-2.115-.444-.36-1.137-.585-1.895-.6-1.127-.03-2.181.42-2.673 1.29l1.378.795c.291-.495.733-.78 1.258-.75.453.03.737.3 0.771.69l.006 2.37-1.229.045c-1.352.06-2.583.675-2.583 2.13 0 1.05.81 1.755 1.884 1.755.77 0 1.341-.33 1.737-.87l0.05 0.765h1.53c0-.285-.02-1.02-.02-1.44l-.01-4.111zm-2.833 2.82c-.372.015-.658-.225-.658-.555 0-.465.464-.705 1.066-.75l.939-.06-.017.84c-.013.345-.371.555-1.33.525z"/></svg>'},
-  {name:"React",sub:"Component UI",color:"#61dafb", svg:'<svg viewBox="-11.5 -10.232 23 20.463" fill="currentColor" width="16" height="16"><circle r="2.05" fill="currentColor"/><g stroke="currentColor" fill="none" stroke-width="1"><ellipse rx="11" ry="4.2"/><ellipse rx="11" ry="4.2" transform="rotate(60)"/><ellipse rx="11" ry="4.2" transform="rotate(120)"/></g></svg>'},
-  {name:"Claude AI",sub:"AI-assisted dev",color:"#d97757", svg:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>'},
-  {name:"ChatGPT",sub:"Workflow & copy",color:"#74aa9c", svg:'<svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M22.28 9.82a5.98 5.98 0 0 0-.52-4.91 6.05 6.05 0 0 0-6.51-2.9A6.06 6.06 0 0 0 4.98 4.18a5.98 5.98 0 0 0-4 2.9 6.05 6.05 0 0 0 .74 7.1 5.98 5.98 0 0 0 .52 4.91 6.05 6.05 0 0 0 6.51 2.9 5.98 5.98 0 0 0 5.31-3.43 6.05 6.05 0 0 0 6.18-3.71 5.98 5.98 0 0 0 2.04-5.03ZM17.14 3.75a4.52 4.52 0 0 1 3.26 3.52c.04.25.02.5-.05.75l-2-1.15A7.54 7.54 0 0 0 11.23 3.32h.01c.71 0 1.42.13 2.07.4a4.54 4.54 0 0 1 3.83.03ZM6.53 12.01A7.44 7.44 0 0 0 8.4 6.74L6.41 5.6a4.53 4.53 0 0 1 6.2-1.74l1.18.68-1.57.9A6 6 0 0 0 6.53 12ZM4.01 10.3a4.52 4.52 0 0 1 .65-4.5 4.52 4.52 0 0 1 3.26-1.72l-.01 2.3A7.53 7.53 0 0 0 2.93 11.33c-.15.2-.28.42-.39.65l-1.99-1.15a4.55 4.55 0 0 1 3.46-.53ZM2.86 16.51a4.54 4.54 0 0 1-1.34-3.32c0-.25.03-.5.1-.75l1.99 1.15A7.53 7.53 0 0 0 8.6 19.33H8.6c-.72.01-1.42-.13-2.07-.4A4.54 4.54 0 0 1 2.86 16.5ZM10.5 17.65a6 6 0 0 0 6.95-3.08l1.58-.9-1.19.68a4.53 4.53 0 0 1-6.19 1.74l-2 1.15a7.44 7.44 0 0 0 .85 2.41Zm9.49-1.63a4.52 4.52 0 0 1-3.9 6.22l.01-2.3a7.53 7.53 0 0 0 5-4.94c.14-.2.27-.42.38-.65l1.99 1.15a4.55 4.55 0 0 1-3.48.52Zm1.65-4.51c0 .25-.03.5-.1.75l-1.99-1.15a7.53 7.53 0 0 0-4.99-5.74h-.01c.72-.01 1.42.13 2.07.4a4.54 4.54 0 0 1 3.68 3.32 4.54 4.54 0 0 1 1.34 3.32Z"/></svg>'},
-  {name:"Git",sub:"Version control",color:"#f05032", svg:'<svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.088 1.909.435.736.736.736 1.932 0 2.669-.736.737-1.932.737-2.669 0-.519-.518-.656-1.254-.446-1.898l-2.618-2.619v3.42c.21.21.344.5.344.82 0 .638-.518 1.156-1.156 1.156-.638 0-1.156-.518-1.156-1.156 0-.32.134-.61.344-.82v-3.42c-.211-.21-.345-.5-.345-.82 0-.32.134-.61.344-.82l-2.73-2.73-3.422 3.422c-.603.604-.603 1.583 0 2.189l10.479 10.479c.603.604 1.582.604 2.188 0l10.479-10.479c.604-.606.604-1.585 0-2.19z"/></svg>'},
+  {
+    name: "HTML5",
+    sub: "Semantic markup",
+    color: "#e44d26",
+    svg: '<svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718h9.049l.203-2.375H5.666l.722 8.188h7.942l-.248 2.822-2.122.56-2.126-.554-.13-1.488H7.31l.245 3.32 4.417 1.236 4.42-1.238.45-5.068H8.531z"/></svg>',
+  },
+  {
+    name: "CSS3",
+    sub: "Layouts & animation",
+    color: "#1572b6",
+    svg: '<svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.436 4.904-2.888.778-2.887-.78-.17-1.927H6.551l.28 3.93 5.112 1.397 5.105-1.4.743-8.318H18.59z"/></svg>',
+  },
+  {
+    name: "Tailwind CSS",
+    sub: "Utility-first",
+    color: "#38bdf8",
+    svg: '<svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"/></svg>',
+  },
+  {
+    name: "JavaScript",
+    sub: "ES6+ & DOM",
+    color: "#f7df1e",
+    svg: '<svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.81.39.024.75.426.857.771l1.502-.405c-.158-.57-.75-1.275-1.725-1.455-.806-.135-1.677-.075-2.315.36-.613.435-.879 1.095-.89 1.77-.017.96.614 1.575 1.487 1.95.842.345 1.907.57 2.146 1.095.106.315.061.645-.257.855-.306.21-.861.345-1.453.255-.783-.12-1.353-.615-1.597-1.23l-1.583.435c.34 1.08 1.44 1.785 2.656 1.935.882.105 1.839-.015 2.515-.465.75-.525 1.157-1.32 1.082-2.145l-.002-.001zm-7.618-.465c.01-.84-.253-1.62-.871-2.115-.444-.36-1.137-.585-1.895-.6-1.127-.03-2.181.42-2.673 1.29l1.378.795c.291-.495.733-.78 1.258-.75.453.03.737.3 0.771.69l.006 2.37-1.229.045c-1.352.06-2.583.675-2.583 2.13 0 1.05.81 1.755 1.884 1.755.77 0 1.341-.33 1.737-.87l0.05 0.765h1.53c0-.285-.02-1.02-.02-1.44l-.01-4.111zm-2.833 2.82c-.372.015-.658-.225-.658-.555 0-.465.464-.705 1.066-.75l.939-.06-.017.84c-.013.345-.371.555-1.33.525z"/></svg>',
+  },
+  {
+    name: "React",
+    sub: "Component UI",
+    color: "#61dafb",
+    svg: '<svg viewBox="-11.5 -10.232 23 20.463" fill="currentColor" width="16" height="16"><circle r="2.05" fill="currentColor"/><g stroke="currentColor" fill="none" stroke-width="1"><ellipse rx="11" ry="4.2"/><ellipse rx="11" ry="4.2" transform="rotate(60)"/><ellipse rx="11" ry="4.2" transform="rotate(120)"/></g></svg>',
+  },
+  {
+    name: "Claude AI",
+    sub: "AI-assisted dev",
+    color: "#d97757",
+    svg: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>',
+  },
+  {
+    name: "ChatGPT",
+    sub: "Workflow & copy",
+    color: "#74aa9c",
+    svg: '<svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M22.28 9.82a5.98 5.98 0 0 0-.52-4.91 6.05 6.05 0 0 0-6.51-2.9A6.06 6.06 0 0 0 4.98 4.18a5.98 5.98 0 0 0-4 2.9 6.05 6.05 0 0 0 .74 7.1 5.98 5.98 0 0 0 .52 4.91 6.05 6.05 0 0 0 6.51 2.9 5.98 5.98 0 0 0 5.31-3.43 6.05 6.05 0 0 0 6.18-3.71 5.98 5.98 0 0 0 2.04-5.03ZM17.14 3.75a4.52 4.52 0 0 1 3.26 3.52c.04.25.02.5-.05.75l-2-1.15A7.54 7.54 0 0 0 11.23 3.32h.01c.71 0 1.42.13 2.07.4a4.54 4.54 0 0 1 3.83.03ZM6.53 12.01A7.44 7.44 0 0 0 8.4 6.74L6.41 5.6a4.53 4.53 0 0 1 6.2-1.74l1.18.68-1.57.9A6 6 0 0 0 6.53 12ZM4.01 10.3a4.52 4.52 0 0 1 .65-4.5 4.52 4.52 0 0 1 3.26-1.72l-.01 2.3A7.53 7.53 0 0 0 2.93 11.33c-.15.2-.28.42-.39.65l-1.99-1.15a4.55 4.55 0 0 1 3.46-.53ZM2.86 16.51a4.54 4.54 0 0 1-1.34-3.32c0-.25.03-.5.1-.75l1.99 1.15A7.53 7.53 0 0 0 8.6 19.33H8.6c-.72.01-1.42-.13-2.07-.4A4.54 4.54 0 0 1 2.86 16.5ZM10.5 17.65a6 6 0 0 0 6.95-3.08l1.58-.9-1.19.68a4.53 4.53 0 0 1-6.19 1.74l-2 1.15a7.44 7.44 0 0 0 .85 2.41Zm9.49-1.63a4.52 4.52 0 0 1-3.9 6.22l.01-2.3a7.53 7.53 0 0 0 5-4.94c.14-.2.27-.42.38-.65l1.99 1.15a4.55 4.55 0 0 1-3.48.52Zm1.65-4.51c0 .25-.03.5-.1.75l-1.99-1.15a7.53 7.53 0 0 0-4.99-5.74h-.01c.72-.01 1.42.13 2.07.4a4.54 4.54 0 0 1 3.68 3.32 4.54 4.54 0 0 1 1.34 3.32Z"/></svg>',
+  },
+  {
+    name: "Git",
+    sub: "Version control",
+    color: "#f05032",
+    svg: '<svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.088 1.909.435.736.736.736 1.932 0 2.669-.736.737-1.932.737-2.669 0-.519-.518-.656-1.254-.446-1.898l-2.618-2.619v3.42c.21.21.344.5.344.82 0 .638-.518 1.156-1.156 1.156-.638 0-1.156-.518-1.156-1.156 0-.32.134-.61.344-.82v-3.42c-.211-.21-.345-.5-.345-.82 0-.32.134-.61.344-.82l-2.73-2.73-3.422 3.422c-.603.604-.603 1.583 0 2.189l10.479 10.479c.603.604 1.582.604 2.188 0l10.479-10.479c.604-.606.604-1.585 0-2.19z"/></svg>',
+  },
 ];
 
 export const WHY: WhyReason[] = [
-  {icon:"💬",color:"#22c55e",title:"Communicative",desc:"Clear updates, plain language — clients always know where things stand."},
-  {icon:"🤝",color:"#6366f1",title:"Collaborative",desc:"I work well with designers, devs, and non-technical stakeholders alike."},
-  {icon:"📋",color:"#f59e0b",title:"Management Focused",desc:"I handle projects end-to-end — from brief to final delivery, on time."},
-  {icon:"🎯",color:"#ec4899",title:"Client Oriented",desc:"Results matter. I measure success by your satisfaction, not just shipping."},
+  {
+    icon: "💬",
+    color: "#22c55e",
+    title: "Communicative",
+    desc: "Clear updates, plain language. Clients always know where things stand.",
+  },
+  {
+    icon: "🤝",
+    color: "#6366f1",
+    title: "Collaborative",
+    desc: "I work well with designers, developers, and non technical stakeholders alike.",
+  },
+  {
+    icon: "📋",
+    color: "#f59e0b",
+    title: "Management Focused",
+    desc: "I handle projects end to end, from brief to final delivery, on time.",
+  },
+  {
+    icon: "🎯",
+    color: "#ec4899",
+    title: "Client Oriented",
+    desc: "Results matter. I measure success by your satisfaction, not just shipping.",
+  },
 ];
 
 export const POSTS: Post[] = [
-  { id:"ai-frontend", title:"How AI is Changing Frontend Development", desc:"AI tools are no longer just autocomplete — they're reshaping how we think about building interfaces.", readTime:"5 min read", date:"Apr 2025", tag:"AI & Dev", content:[{h:"The shift is already happening",p:"A year ago, AI in frontend meant Copilot finishing your function signatures. Today it means generating full component trees and suggesting design improvements — within seconds."},{h:"From autocomplete to co-pilot",p:"The most significant change isn't speed — it's how we approach problems. Developers spend less time on boilerplate and more on architecture and UX decisions."},{h:"What this means for beginners",p:"AI lowers the barrier to building real things. But fundamentals still matter — understanding why a layout breaks separates good developers from great ones."},{h:"The honest tradeoff",p:"AI-generated code can be confident and wrong. Developers who thrive use it wisely, verifying outputs and knowing when to push back."}] },
-  { id:"ai-quality", title:"Using AI to Build Faster Without Losing Quality", desc:"Speed and quality aren't opposites — if you know how to work with AI the right way.", readTime:"4 min read", date:"Mar 2025", tag:"Workflow", content:[{h:"The speed trap",p:"When I first started using AI heavily, I accepted outputs too quickly. Three hours later I'd find a prop drilling nightmare buried in a component."},{h:"A workflow that actually works",p:"Treating AI output as a first draft changed everything. I review it like a junior developer's PR — checking edge cases, naming, and component contracts."},{h:"Where AI shines",p:"Responsive Tailwind layouts, converting rough ideas into JS logic, generating placeholder content, catching copy inconsistencies."},{h:"Where you still need to think",p:"Accessibility, performance, state architecture — these require a human with context."}] },
-  { id:"ai-tools", title:"AI Tools Every Developer Should Learn", desc:"Not a definitive list — a practical one. The tools I use daily and why they're worth your time.", readTime:"6 min read", date:"Feb 2025", tag:"Tools", content:[{h:"Claude (Anthropic)",p:"My primary tool for code generation and debugging. It handles nuance well and usually gets the intent right on the first try."},{h:"ChatGPT (OpenAI)",p:"Still excellent for brainstorming and early-stage exploration before committing to a direction."},{h:"GitHub Copilot",p:"The best tool for in-editor flow. It understands your existing codebase — a genuine productivity multiplier."},{h:"The right mindset",p:"None of these tools replace understanding your craft. They amplify it."}] },
+  {
+    id: "ai-frontend",
+    title: "How AI is Changing Frontend Development",
+    desc: "AI tools are no longer just autocomplete. They are reshaping how we think about building interfaces.",
+    readTime: "5 min read",
+    date: "Apr 2025",
+    tag: "AI & Dev",
+    content: [
+      {
+        h: "The shift is already happening",
+        p: "A year ago, AI in frontend meant Copilot finishing your function signatures. Today it means generating full component trees and suggesting design improvements within seconds.",
+      },
+      {
+        h: "From autocomplete to copilot",
+        p: "The most significant change is not speed. It is how we approach problems. Developers spend less time on boilerplate and more time on architecture and user experience decisions.",
+      },
+      {
+        h: "What this means for beginners",
+        p: "AI lowers the barrier to building real products. But fundamentals still matter. Understanding why a layout breaks is what separates good developers from great ones.",
+      },
+      {
+        h: "The honest tradeoff",
+        p: "AI generated code can be confident and completely wrong. Developers who thrive use it wisely, verify the output, and know when to challenge it.",
+      },
+    ],
+  },
+  {
+    id: "ai-quality",
+    title: "Using AI to Build Faster Without Losing Quality",
+    desc: "Speed and quality are not opposites if you know how to work with AI properly.",
+    readTime: "4 min read",
+    date: "Mar 2025",
+    tag: "Workflow",
+    content: [
+      {
+        h: "The speed trap",
+        p: "When I first started using AI heavily, I accepted its output too quickly. A few hours later, I would often discover a prop drilling nightmare hidden deep inside a component.",
+      },
+      {
+        h: "A workflow that actually works",
+        p: "Treating AI output as a first draft changed everything. I review it the same way I would review a junior developer's pull request by checking edge cases, naming, and component contracts.",
+      },
+      {
+        h: "Where AI shines",
+        p: "Responsive Tailwind layouts, transforming rough ideas into JavaScript logic, generating placeholder content, and spotting copy inconsistencies.",
+      },
+      {
+        h: "Where you still need to think",
+        p: "Accessibility, performance, and state architecture still require human judgment and context.",
+      },
+    ],
+  },
+  {
+    id: "ai-tools",
+    title: "AI Tools Every Developer Should Learn",
+    desc: "Not a definitive list, but a practical one. These are the tools I use daily and why they deserve your attention.",
+    readTime: "6 min read",
+    date: "Feb 2025",
+    tag: "Tools",
+    content: [
+      {
+        h: "Claude by Anthropic",
+        p: "My primary tool for code generation and debugging. It handles nuance well and usually understands the intent correctly on the first attempt.",
+      },
+      {
+        h: "ChatGPT by OpenAI",
+        p: "Still excellent for brainstorming and early stage exploration before committing to a direction.",
+      },
+      {
+        h: "GitHub Copilot",
+        p: "The best tool for maintaining flow directly inside the editor. It understands your existing codebase and acts as a genuine productivity multiplier.",
+      },
+      {
+        h: "The right mindset",
+        p: "None of these tools replace mastery. They simply amplify it.",
+      },
+    ],
+  },
 ];
