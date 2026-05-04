@@ -12,7 +12,7 @@ const SkillItem = ({ s, t }: any) => {
       style={{ padding:"1.2rem", background:h?t.bgHover:t.bgCard, transition:"background .18s", cursor:"default" }}>
       <div style={{ width:30, height:30, borderRadius:7, background:dark?s.color+"14":"rgba(10,10,9,.055)", border:`1px solid ${dark?s.color+"22":t.border}`, display:"flex", alignItems:"center", justifyContent:"center", marginBottom:".7rem", color: dark?s.color:t.text, filter:dark?"none":"grayscale(1)" }} dangerouslySetInnerHTML={{ __html: s.svg }} />
       <div style={{ color:t.text, fontWeight:700, fontSize:".84rem", marginBottom:".15rem" }}>{s.name}</div>
-      <div style={{ color:t.textFaint, fontFamily:"monospace", fontSize:".68rem" }}>{s.sub}</div>
+      <div style={{ color:t.textMuted, fontFamily:"monospace", fontSize:".68rem" }}>{s.sub}</div>
     </div>
   );
 };
@@ -61,7 +61,7 @@ export default function About() {
         <div data-sr style={{ marginTop:"3rem", display:"grid", gridTemplateColumns:"repeat(2,1fr)", gap:"1px", background:t.border, border:`1px solid ${t.border}`, borderRadius:12, overflow:"hidden", ...srStyle(560) }}>
           {[["Location","Indonesia (Remote)"],["Available","Yes — new projects"],["Response","< 24 hours"],["Languages","Indonesian, English"]].map(([k,v])=>(
             <div key={k} style={{ padding:"1.1rem 1.4rem", background:t.bgCard }}>
-              <div style={{ fontFamily:"monospace", color:t.textFaint, fontSize:".65rem", letterSpacing:".08em", textTransform:"uppercase", marginBottom:".25rem" }}>{k}</div>
+              <div style={{ fontFamily:"monospace", color:t.textMuted, fontSize:".65rem", letterSpacing:".08em", textTransform:"uppercase", marginBottom:".25rem" }}>{k}</div>
               <div style={{ color:t.text, fontWeight:600, fontSize:".86rem" }}>{v}</div>
             </div>
           ))}

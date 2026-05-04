@@ -7,6 +7,7 @@ export function ThemeSwitcher() {
     <button
       onClick={toggle}
       title={dark ? "Switch to Light" : "Switch to Dark"}
+      aria-label="Toggle Theme"
       style={{
         position: 'relative',
         width: '64px',

@@ -15,6 +15,7 @@ const SocialIcon = ({ s, t }: { s: typeof SOCIALS[0]; t: any }) => {
       href={s.url}
       target="_blank"
       rel="noreferrer"
+      aria-label={s.name}
       className="interactive"
       onMouseEnter={() => setHov(true)}
       onMouseLeave={() => setHov(false)}

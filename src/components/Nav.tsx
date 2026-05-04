@@ -38,7 +38,7 @@ export default function Nav() {
             </div>
             <div className="ham-btn" style={{ gap: ".7rem", alignItems: "center" }}>
               <ThemeSwitcher />
-              <button onClick={() => setMob(true)} style={{ background: "none", border: `1px solid ${t.border}`, borderRadius: 4, padding: ".42rem .55rem", cursor: "pointer", flexDirection: "column", gap: 5, alignItems: "center", justifyContent: "center", display: "flex" }}>
+              <button aria-label="Open mobile menu" onClick={() => setMob(true)} style={{ background: "none", border: `1px solid ${t.border}`, borderRadius: 4, padding: ".42rem .55rem", cursor: "pointer", flexDirection: "column", gap: 5, alignItems: "center", justifyContent: "center", display: "flex" }}>
                 {[0, 1, 2].map(i => <span key={i} style={{ display: "block", width: 18, height: 1.5, background: t.text, transition: "background .4s" }} />)}
               </button>
             </div>
