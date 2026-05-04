@@ -266,22 +266,10 @@ const HomeProjectCard = ({ project, i }: { project: Project; i: number }) => {
 export default function Home() {
   const navigate = useNavigate();
   const { t } = useTheme();
-  const [vis, setVis] = useState(false);
-  const scrollRef = useScrollReveal();
   const homeProjects = PROJECTS;
-
   useEffect(() => {
     document.title = "Hermawan Prastiyanto | Portfolio";
   }, []);
-  useEffect(() => {
-    const tm = setTimeout(() => setVis(true), 50);
-    return () => clearTimeout(tm);
-  }, []);
-  const fade = (delay: number) => ({
-    opacity: vis ? 1 : 0,
-    transform: vis ? "translateY(0)" : "translateY(24px)",
-    transition: `opacity .7s cubic-bezier(.22,1,.36,1) ${delay}ms,transform .7s cubic-bezier(.22,1,.36,1) ${delay}ms`,
-  });
 
   return (
     <PageWrapper>
@@ -302,7 +290,6 @@ export default function Home() {
               alignItems: "center",
               gap: ".8rem",
               marginBottom: "3rem",
-              ...fade(100),
             }}
           >
             <span
@@ -329,7 +316,7 @@ export default function Home() {
           </div>
           <div
             className="hero-kicker-grid"
-            style={{ alignItems: "start", ...fade(300) }}
+            style={{ alignItems: "start" }}
           >
             <div
               style={{ borderTop: `1px solid ${t.border}`, paddingTop: "1rem" }}
@@ -359,7 +346,7 @@ export default function Home() {
               </p>
             </div>
             <div>
-              <div style={{ ...fade(420) }}>
+              <div>
                 <AnimatedName t={t} />
               </div>
               <p
@@ -370,7 +357,6 @@ export default function Home() {
                   lineHeight: 1.9,
                   marginBottom: "2.3rem",
                   fontFamily: "monospace",
-                  ...fade(900),
                 }}
               >
                 AI powered web developer based in Indonesia. I design and build
@@ -382,7 +368,6 @@ export default function Home() {
                   display: "flex",
                   gap: ".85rem",
                   flexWrap: "wrap",
-                  ...fade(1050),
                 }}
               >
                 <Btn variant="white" onClick={() => navigate("/projects")}>
@@ -396,7 +381,7 @@ export default function Home() {
           </div>
           <div
             className="archive-grid"
-            style={{ marginTop: "5.2rem", ...fade(1200) }}
+            style={{ marginTop: "5.2rem" }}
           >
             {[
               [
@@ -453,7 +438,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div ref={scrollRef}>
+      <div>
         <section id="work-sec" style={{ padding: "6rem 1.5rem" }}>
           <div className="editorial-wrap">
             <div

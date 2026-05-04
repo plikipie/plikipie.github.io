@@ -4,16 +4,10 @@ import { ThemeTokens } from "../../lib/theme";
 export function AnimatedName({ t }: { t: ThemeTokens }) {
   const first = "Hermawan";
   const second = "Prastiyanto";
-  const [show, setShow] = useState(false);
-  const [interactive, setInteractive] = useState(false);
+  const [show, setShow] = useState(true);
+  const [interactive, setInteractive] = useState(true);
   const containerRef = useRef<HTMLHeadingElement>(null);
   const spansRef = useRef<(HTMLSpanElement | null)[]>([]);
-
-  useEffect(() => { 
-    const tm = setTimeout(() => setShow(true), 300); 
-    const tm2 = setTimeout(() => setInteractive(true), 1800); // Activate hover effect after entry animation
-    return () => { clearTimeout(tm); clearTimeout(tm2); }; 
-  }, []);
   
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!interactive) return;
@@ -78,9 +72,9 @@ export function AnimatedName({ t }: { t: ThemeTokens }) {
           style={{ 
             display:"inline-block", 
             position: "relative",
-            opacity:show?1:0, 
-            transform:show?"translateY(0px) rotateX(0deg)":"translateY(60px) rotateX(-80deg)", 
-            transition: interactive ? "transform 0.5s cubic-bezier(.22,1,.36,1)" : `opacity .4s ease ${baseDelay+i*38}ms,transform .5s cubic-bezier(.22,1,.36,1) ${baseDelay+i*38}ms`, 
+            opacity:1, 
+            transform:"translateY(0px) rotateX(0deg)", 
+            transition: "transform 0.5s cubic-bezier(.22,1,.36,1)", 
             transformOrigin:"center", 
             color,
             pointerEvents: "none" 
