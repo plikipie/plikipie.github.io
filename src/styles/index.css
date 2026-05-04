@@ -88,25 +88,6 @@ input:focus, textarea:focus { outline:none; border-color:color-mix(in srgb, var(
   transform: translateY(0) !important;
 }
 
-/* Ornaments */
-.orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(90px);
-  animation: float 25s infinite ease-in-out alternate;
-  will-change: transform;
-}
-
-.orb-1 { width: 55vw; height: 55vw; max-width: 600px; max-height: 600px; top: -10%; left: -10%; animation-duration: 28s; }
-.orb-2 { width: 45vw; height: 45vw; max-width: 500px; max-height: 500px; bottom: -20%; right: -10%; animation-duration: 34s; animation-direction: alternate-reverse; }
-.orb-3 { width: 40vw; height: 40vw; max-width: 400px; max-height: 400px; top: 40%; left: 30%; animation-duration: 40s; }
-
-@keyframes float {
-  0% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(8vw, -6vw) scale(1.05); }
-  66% { transform: translate(-6vw, 8vw) scale(0.95); }
-  100% { transform: translate(0, 0) scale(1); }
-}
 
 @media(max-width:680px){
   .desk-nav{display:none!important;}

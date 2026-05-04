@@ -10,8 +10,6 @@ import Blog from "./pages/Blog";
 import PostDetail from "./pages/PostDetail";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-import { BackgroundOrnaments } from "./components/ui/BackgroundOrnaments";
-import { CustomCursor } from "./components/ui/CustomCursor";
 
 function AppShell() {
   const location = useLocation();
@@ -20,8 +18,7 @@ function AppShell() {
 
   return (
     <div style={{ background: t.bg, minHeight: "100vh", color: t.text, transition: "background .4s ease, color .4s ease", position: "relative" }}>
-      <CustomCursor />
-      <BackgroundOrnaments />
+
       <Nav />
       <div style={{ paddingTop: 60, position: "relative", zIndex: 10 }}>
         <Routes>
