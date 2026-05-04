@@ -75,7 +75,7 @@ export function useTheme() {
 }
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [dark, setDark] = useState(true);
+  const [dark, setDark] = useState(false);
   const toggle = () => setDark(d => !d);
   const t = dark ? DARK : LIGHT;
 
