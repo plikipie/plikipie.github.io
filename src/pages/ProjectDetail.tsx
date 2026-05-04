@@ -60,7 +60,7 @@ export default function ProjectDetail() {
           <h2 style={{ fontSize:"clamp(1.6rem,3vw,2.4rem)", fontWeight:900, letterSpacing:"-.04em", color:t.text, marginBottom:".75rem" }}>Interested in working with me?</h2>
           <p style={{ color:t.textMuted, fontFamily:"monospace", fontSize:".88rem", marginBottom:"2rem" }}>Let's build something great together.</p>
           <button onClick={()=>navigate("/contact")} onMouseEnter={()=>setCtaHov(true)} onMouseLeave={()=>setCtaHov(false)}
-            style={{ background:ctaHov?t.accentHov:t.accent, color:"#0a0a09", padding:".75rem 2rem", borderRadius:4, fontFamily:"monospace", fontWeight:800, fontSize:".82rem", letterSpacing:".08em", border:"none", cursor:"pointer", transition:"all .2s", transform:ctaHov?"translateY(-2px)":"none", boxShadow:ctaHov?`0 10px 28px ${t.borderHi}`:"none" }}>
+            style={{ background:ctaHov?t.accentHov:t.accent, color:dark?"#0a0a09":"#ffffff", padding:".75rem 2rem", borderRadius:4, fontFamily:"monospace", fontWeight:800, fontSize:".82rem", letterSpacing:".08em", border:"none", cursor:"pointer", transition:"all .2s", transform:ctaHov?"translateY(-2px)":"none", boxShadow:ctaHov?`0 10px 28px ${t.borderHi}`:"none" }}>
             EMAIL ME →
           </button>
         </div>
