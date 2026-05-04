@@ -266,6 +266,7 @@ const HomeProjectCard = ({ project, i }: { project: Project; i: number }) => {
 export default function Home() {
   const navigate = useNavigate();
   const { t } = useTheme();
+  const scrollRef = useScrollReveal();
   const homeProjects = PROJECTS;
   useEffect(() => {
     document.title = "Hermawan Prastiyanto | Portfolio";
@@ -438,7 +439,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div>
+      <div ref={scrollRef}>
         <section id="work-sec" style={{ padding: "6rem 1.5rem" }}>
           <div className="editorial-wrap">
             <div
